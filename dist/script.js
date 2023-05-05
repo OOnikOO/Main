@@ -33,22 +33,21 @@ if ( 0 < age && age <= 120) {
     alert ('Не звезди(те)!')
 }
 =========================================================*/
-var userName = prompt("Кто там?", '');
+/*========================================================
+let userName = prompt("Кто там?", '')
 if (userName === 'Админ') {
-    var password = prompt('Пароль?', '');
+    let password = prompt('Пароль?', '')
     if (password === 'Я главный') {
-        alert('Здравствуйте!');
+    alert( 'Здравствуйте!' )
+    } else if (password === '' || password === null) {
+    alert( 'Отменено' )
+    } else {
+    alert( 'Неверный пароль' )
     }
-    else if (password === '' || password === null) {
-        alert('Отменено');
-    }
-    else {
-        alert('Неверный пароль');
-    }
+
+} else if (userName === '' || userName === null) {
+    alert( 'Отменено' )
+} else {
+    alert( "Я вас не знаю" )
 }
-else if (userName === '' || userName === null) {
-    alert('Отменено');
-}
-else {
-    alert("Я вас не знаю");
-}
+=========================================================*/ 
