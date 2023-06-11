@@ -79,13 +79,12 @@ prompt(), а выводить результат с помощью alert().
 
                 //Не понятно, как без if сделать :(
 
-        let num = +(prompt('Введите целое число.') as string)
-        //let even = ('Число четное.')
-        let odd = ('Число нечетное.')
-        let evenBoolean = num % 2 == 0
-        let oddBoolean = odd
-        let result = evenBoolean || oddBoolean
-        alert(result)
+        //let num = +(prompt('Введите целое число.') as string)
+        //let check = num % 2 == 0
+        //let even =('Число четное.')
+        //let odd = ('Число нечетное.')
+        //let result = even || odd
+        //alert(result)
 
 
 
