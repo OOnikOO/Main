@@ -80,9 +80,9 @@ prompt(), а выводить результат с помощью alert().
                 //Не понятно, как без if сделать :(
 
         //let num = +(prompt('Введите целое число.') as string)
-        //let even = num % 2 == 0
-        //let odd
-        //alert(even || odd)
+        //let even = ('Число четное.')
+        //let odd = ('Число нечетное.')
+        //alert(`${even}` || `${odd}`)
 
 
 
