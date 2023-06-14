@@ -51,3 +51,17 @@ if (userName === 'Админ') {
     alert( "Я вас не знаю" )
 }
 =========================================================*/
+/*1. Написать функцию, которая принимает 2 строки и сравнивает их длину. Функция возвращает 1, если в первой строке больше символов, чем во второй; -1 – если во второй больше символов, чем в первой; или 0 – если строки одинаковой длины.
+*/
+var firstStr = 'abc';
+var secondStr = 'abcd';
+function compareLines(firstStr, secondStr) {
+    if (firstStr.length > secondStr.length) {
+        return 1;
+    }
+    else if (firstStr.length < secondStr.length) {
+        return -1;
+    }
+    return 0;
+}
+console.log(compareLines(firstStr, secondStr));
