@@ -123,9 +123,50 @@ prompt(), а выводить результат с помощью alert().
 Вам необходимо самостоятельно решить, для какого задания
 какой оператор ветвления лучше использовать: if, switch или
 тернарный.
+*/
+
+// 1. Запросить у пользователя его возраст и определить, кем он является: ребенком (0–2), подростком (12–18), взрослым (18_60) или пенсионером (60– ...).
+
+// let userAge = prompt('Введите Ваш возраст')
+
+
+// 2. Запросить у пользователя число от 0 до 9 и вывести ему спецсимвол, который расположен на этой клавише (1–!, 2–@, 3–# и т. д).
 
 
 
+// 3. Запросить у пользователя трехзначное и число и проверить, есть ли в нем одинаковые цифры.
+
+
+
+// 4. Запросить у пользователя год и проверить, високосный он или нет. Високосный год либо кратен 400, либо кратен 4 и при этом не кратен 100.
+
+
+
+// 5. Запросить у пользователя пятиразрядное число и определить, является ли оно палиндромом.
+
+
+
+// 6. Написать конвертор валют. Пользователь вводит количество USD, выбирает, в какую валюту хочет перевести: EUR, UAN или AZN, и получает в ответ соответствующую сумму.
+
+
+
+// 7. Запросить у пользователя сумму покупки и вывести сумму к оплате со скидкой: от 200 до 300 – скидка будет 3%, от 300 до 500 – 5%, от 500 и выше – 7%.
+
+
+
+// 8. Запросить у пользователя длину окружности и периметр квадрата. Определить, может ли такая окружность поместиться в указанный квадрат.
+
+
+
+// 9. Задать пользователю 3 вопроса, в каждом вопросе по 3 варианта ответа. За каждый правильный ответ начисляется 2 балла. После вопросов выведите пользователю количество набранных баллов.
+
+
+
+// 10. Запросить дату (день, месяц, год) и вывести следующую за ней дату. Учтите возможность перехода на следующий месяц, год, а также високосный год.
+//===================================================================================================
+//===================================================================================================
+
+/*
 1. Написать функцию, которая принимает 2 строки и сравнивает их длину. Функция возвращает 1, если в первой строке больше символов, чем во второй; -1 – если во второй больше символов, чем в первой; или 0 – если строки одинаковой длины.
 
 let firstStr = 'abc'
@@ -142,29 +183,190 @@ function compareLines (firstStr, secondStr) {
 }
 console.log(compareLines(firstStr,secondStr))
 */
+
+
 //Задание 1
 // Создать массив из 10 случайных чисел и написать несколько функций для работы с ним.
 
 
-function randomInt(min: number, max: number) {
-  return Math.floor(Math.random() * (max - min + 1) + min - 0.5)
-}
+// function randomInt(min: number, max: number) {
+  // return Math.floor(Math.random() * (max - min + 1) + min - 0.5)
+// }
 
-let newArr = []
-for (let i = 0; i < 10; i++) {
-  newArr[i] = randomInt(0, 20)
-}
+// let newArr = []
+// for (let i = 0; i < 10; i++) {
+  // newArr[i] = randomInt(0, 20)
+// }
 
 //1. Функция принимает массив и выводит его на экран.
-function showArray(arr: any[]) {
-  console.log(arr)
-}
+// function showArray(arr: any[]) {
+  // console.log(arr)
+// }
 
 //2. Функция принимает массив и выводит только четные элементы
-function showEven(arr: any[]) {
-  for (let i = 0; i < arr.length; i++) {
-    if (arr[i] % 2 == 0) {
-      console.log(arr[i])
+// function showEven(arr: any[]) {
+  // for (let i = 0; i < arr.length; i++) {
+    // if (arr[i] % 2 == 0) {
+      // console.log(arr[i])
+    // }
+  // }
+// }
+
+// showArray(newArr)
+
+
+// Задание 1
+// Создать массив «Список покупок». Каждый элемент массива является объектом, который содержит название продукта, необходимое количество и куплен или нет. Написать несколько функций для работы с таким массивом.
+
+/*
+const purchase = [
+  {
+    name: 'a',
+    count: 10,
+    purchased: true,
+  },
+  {
+    name: 'b',
+    count: 5,
+    purchased: false,
+  },
+  {
+    name: 'c',
+    count: 3,
+    purchased: true,
+  },
+  {
+    name: 'd',
+    count: 1,
+    purchased: false,
+  },
+]
+
+const purchasedOl = document.querySelector('.purchase')
+const showPurchaseButton = document.querySelector('.showPurchase')
+const addPurchaseButton = document.querySelector('.addPurchase')
+const setPurchasedButton = document.querySelector('.setPurchased')
+*/
+
+// 1. Вывод всего списка на экран таким образом, чтобы сначала шли некупленные продукты, а потом – купленные.
+
+/*
+function showPurchase() {
+  if (purchasedOl) {
+    purchasedOl.innerHTML = ``
+  }
+  for (let el of purchase) {
+    if (!el.purchased) {
+      if (purchasedOl) {
+        purchasedOl.innerHTML += `<li>${el.name} необходимо купить ${el.count} штук</li>`
+      }
+    }
+  }
+  for (let el of purchase) {
+    if (el.purchased) {
+      if (purchasedOl) {
+        purchasedOl.innerHTML += `<li>${el.name} куплено ${el.count} штук</li>`
+      }
     }
   }
 }
+
+showPurchaseButton?.addEventListener('click', showPurchase)
+
+*/
+
+// 2. Добавление покупки в список. Учтите, что при добавлении покупки с уже существующим в списке продуктом, необходимо увеличивать количество в существующей покупке, а не добавлять новую.
+
+
+
+/*
+addPurchaseButton?.addEventListener('click', addPurchase)
+
+function addPurchase() {
+  const name = prompt('Введите назавание покупки') as string
+  const count = +(prompt('Введите количество') as string)
+  let find = false
+  for (let el of purchase) {
+    if (el.name == name) {
+      find = true
+      el.count += count
+    }
+  }
+  if (!find) {
+    purchase.push({
+      name,
+      count,
+      purchased: false
+    })
+  }
+  showPurchase()
+}
+*/
+
+// 3. Покупка продукта. Функция принимает название продукта и отмечает его как купленный.
+
+/*
+function setPurchased() {
+  const name = prompt('Введите назавание покупки') as string
+  for (let el of purchase) {
+    if (el.name == name) {
+      el.purchased = true
+    }
+  }
+  showPurchase()
+}
+
+setPurchasedButton?.addEventListener('click', setPurchased)
+*/
+
+
+
+// Задание 2
+// Создать массив, описывающий чек в магазине. Каждый элемент массива состоит из названия товара, количества и цены за единицу товара. Написать следующие функции.
+
+const cheque = [
+  {
+    name: 'a',
+    count: 1,
+    price: '1$',
+  },
+  {
+    name: 'b',
+    count: 5,
+    price: '5$',
+  },
+  {
+    name: 'c',
+    count: 10,
+    price: '10$',
+  },
+  {
+    name: 'd',
+    count: 100,
+    price: '100$',
+  },
+]
+
+// 1. Распечатка чека на экран.
+
+function showCheque(arr: any[]) {
+   console.log(arr)
+}
+
+showCheque(cheque)
+// 2. Подсчет общей суммы покупки.
+
+function getSum(arr:any[]) {
+  let sum = 0
+  for (let el of arr) {
+    sum += el.count*parseFloat(el.price)
+  }
+  return sum
+}
+getSum(cheque)
+
+// 3. Получение самой дорогой покупки в чеке.
+
+
+
+// 4. Подсчет средней стоимости одного товара в чеке. 
