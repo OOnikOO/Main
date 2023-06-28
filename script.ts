@@ -215,11 +215,48 @@ alert("Високосный год")
 
 // 5. Запросить у пользователя пятиразрядное число и определить, является ли оно палиндромом.
 
+/*
+const num = prompt('Введите пятиразрядное число')
+if (num[0] == num[4] && num[1] == num[3]) {
+  alert ('Палиндромом')
+}  else alert (' Не палиндромом')
+*/
+
+/* Вариант #1 (Function Declaration)
+const num1 = '12345'
+const num2 = '12321'
+
+function result (num) {
+  if (num[0] == num[4] && num[1] == num[3]) {
+    return 'Палиндромом'
+  }  else {
+    return 'Не палиндромом'
+  }
+}
+console.log (result (num1))
+console.log (result (num2))
+*/
+
+/* Вариант #2 (Function Expression + Стрелочная функция)
+const resultArr = (num) => num[0] == num[4] && num[1] == num[3]?
+  'Палиндромом':'Не палиндромом'
+console.log (result (num1))
+console.log (result (num2))
+*/
 
 
 // 6. Написать конвертор валют. Пользователь вводит количество USD, выбирает, в какую валюту хочет перевести: EUR, UAN или AZN, и получает в ответ соответствующую сумму.
+const coefficientEur = 0.917
+const coefficientUah = 36.81
+const coefficientAzn = 1.7
 
+function convert (quantity, ) {
+  switch() {
+    case EUR:
+      console.log(quantity * coefficientEur)
+  }
 
+}
 
 // 7. Запросить у пользователя сумму покупки и вывести сумму к оплате со скидкой: от 200 до 300 – скидка будет 3%, от 300 до 500 – 5%, от 500 и выше – 7%.
 
