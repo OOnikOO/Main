@@ -254,7 +254,37 @@ function define(circumference, perimeter) {
 }
 console.log(define(5, 50));
 // 9. Задать пользователю 3 вопроса, в каждом вопросе по 3 варианта ответа. За каждый правильный ответ начисляется 2 балла. После вопросов выведите пользователю количество набранных баллов.
+/*
+let counter = 0
+
+const question1 = confirm('a?')
+const question2 = confirm('b?')
+const question3 = confirm('c?')
+
+if (question1 == true) {
+  counter += 2
+}
+
+const question4 = confirm('a?')
+const question5 = confirm('b?')
+const question6 = confirm('c?')
+
+if (question4 == true) {
+  counter += 2
+}
+
+const question7 = confirm('a?')
+const question8 = confirm('b?')
+const question9 = confirm('c?')
+
+if (question7 == true) {
+  counter += 2
+}
+
+alert('Количество набранных баллов ' + counter)
+*/
 // 10. Запросить дату (день, месяц, год) и вывести следующую за ней дату. Учтите возможность перехода на следующий месяц, год, а также високосный год.
+// МногА кода... нихоцу
 //===================================================================================================
 //===================================================================================================
 /*
